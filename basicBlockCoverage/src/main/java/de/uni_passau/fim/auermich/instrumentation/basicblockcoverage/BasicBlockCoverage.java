@@ -167,7 +167,7 @@ public class BasicBlockCoverage {
             }
 
             // the name of the instrumented APK
-            File outputAPKFile = new File(apkPath.getParentFile(), apkPath.getName() + "-instrumented.apk");
+            File outputAPKFile = new File(apkPath.getParentFile(), apkPath.getName().substring(0, apkPath.getName().length() - 4) + "-instrumented.apk");
 
             // build the instrumented APK together
             boolean builtAPK = Utility.buildAPK(decodedAPKPath, outputAPKFile);
